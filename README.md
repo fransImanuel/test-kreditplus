@@ -1,22 +1,23 @@
 
-# Test PARI
+# Test kreditplus
 
-test pari
-
-
-## Demo
-
-1. Run The Docker command first to initiate PostgreSQL (Make Sure The DB run first and all the config related is correct)
-
-`docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d -p 5432:5432 postgres`
-
-2. Run The Go Program
+test kreditplus
 
 
-`go mod tidy`
-`go run main.go`
+## Explaination
 
-3. after you run on your local, access the swagger on path "/swagger/index.html" (e.g http://localhost:8089/swagger/index.html) for documentations
+The Project I did only gave general outline of the solution ( since there is no specific instruction ) 
 
+Regarding The Minimum Requirement 
 
-(optional: change the ENV file by yourself if you have different configuration)
+- Point 3
+I use pessimistic Locking for handling concurrent transaction
+
+- Point 4
+Adopt min 3 from 10 OWASP
+
+-- SQL Injection Prevention: GORM Framework already guard our code from sql injection.
+
+-- Input Validation: Input Validation already managed by Gin Struct tag validation.
+
+-- Authentication: I add JWT Middleware for every endpoint
