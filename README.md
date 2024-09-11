@@ -20,4 +20,5 @@ Adopt min 3 from 10 OWASP
 
 -- Input Validation: Input Validation already managed by Gin Struct tag validation.
 
--- Authentication: I add JWT Middleware for every endpoint
+-- Authentication: JWT is sufficent in this case ( added JWT Middleware for every end point )
+
